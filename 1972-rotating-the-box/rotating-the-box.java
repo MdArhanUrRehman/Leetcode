@@ -1,31 +1,26 @@
 class Solution {
 
-     private void solve(char[] grid) {
-
+    private void solve(char[] grid){
         int n = grid.length;
-        int j = n - 1;
+        int j = n-1;
+        int i = n-1;
         boolean empty = false;
 
-        for (int i = n - 1; i >= 0; i--) {
-
-            if (!empty && grid[i] == '.') {
+        while(i>=0){
+            if(!empty && grid[i] == '.'){
                 j = i;
                 empty = true;
-            }
-
-            else if (grid[i] == '*') {
+            }else if(grid[i] == '*'){
                 j = i - 1;
                 empty = false;
-            }
-
-            else if (grid[i] == '#') {
-
+            }else if(grid[i] == '#'){
                 char temp = grid[j];
                 grid[j] = grid[i];
                 grid[i] = temp;
-
                 j--;
             }
+
+            i--;
         }
     }
 
