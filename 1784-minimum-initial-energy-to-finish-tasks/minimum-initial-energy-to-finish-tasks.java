@@ -25,14 +25,14 @@ class Solution {
             (b[1] - b[0]) - (a[1] - a[0])
         );
 
-        // int energy = 0;
-        // for (int i = 0; i < n; i++) {
-        //     int ene = tasks[i][1];
-        //     energy += ene;
-        // }
+        int energy = 0;
+        for (int i = 0; i < n; i++) {
+            int ene = tasks[i][1];
+            energy += ene;
+        }
 
         int se = 0;
-        int ee = (int)1e9;
+        int ee = energy;
 
         while(se < ee){
             int mid = se + (ee - se) / 2;
