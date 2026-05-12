@@ -20,7 +20,8 @@ class Solution {
     public int minimumEffort(int[][] tasks) {
         int n = tasks.length;
         int m = tasks[0].length;
-
+        
+        // Keep your energy high enough for future tasks, need very high minimum energy
         Arrays.sort(tasks, (a, b) ->
             (b[1] - b[0]) - (a[1] - a[0])
         );
