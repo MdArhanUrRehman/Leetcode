@@ -16,13 +16,11 @@ class Solution {
             int count = waterStartTime[i] + waterDuration[i];
 
             for (int j = 0; j < landStartTime.length; j++) {
-                int val = landStartTime[j] < count ? count + landDuration[j] : landStartTime[j] + landDuration[j];
+               int val = landStartTime[j] < count ? count + landDuration[j] : landStartTime[j] + landDuration[j];
 
                 min = Math.min(val, min);
             }
         }
-
-        
 
         return min;
     }
