@@ -1,7 +1,7 @@
 class Solution {
 
-    private int GCD(int a, int b){
-        if(b == 0){
+    public int GCD(int a, int b) {
+        if (b == 0) {
             return a;
         }
 
@@ -9,14 +9,18 @@ class Solution {
     }
 
     public int gcdOfOddEvenSums(int n) {
-        int even = 0;
-        int odd = 0;
+        int oddSum = 0;
+        int evenSum = 0;
+        int odd = 1;
+        int even = 2;
 
-        for(int i=1; i<=(n*2); i+=2){
-            even+=i;
-            odd+=i+1;
+        for (int i = 1; i <= n; i++) {
+            oddSum += odd;
+            evenSum += even;
+            odd += 2;
+            even += 2;
         }
 
-        return GCD(odd, even);
+        return n;
     }
 }
