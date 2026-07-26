@@ -8,12 +8,6 @@ class Solution {
         int neg = 0;
         int sum = 0;
 
-        for(int i=0; i<n; i++){
-            if(nums[i] < 0){
-                neg++;
-            }
-        }
-
         return Math.max(nums[0] * nums[1] * nums[n-1],
          nums[n-1] * nums[n-2] * nums[n-3]);
     }
