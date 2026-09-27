@@ -28,9 +28,9 @@ class Solution {
         }
 
         while(!st.isEmpty()){
-            ans.insert(0, st.pop());
+            ans.append(st.pop());
         }
 
-        return ans.toString();
+        return ans.reverse().toString();
     }
 }
