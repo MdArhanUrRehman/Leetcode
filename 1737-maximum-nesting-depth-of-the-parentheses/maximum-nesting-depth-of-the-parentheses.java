@@ -12,7 +12,6 @@ class Solution {
                 max = Math.max(depth, max);
             }else if(ch == ')'){
                 depth--;
-                max = Math.max(depth, max);
             }
         }
 
