@@ -1,10 +1,5 @@
 class Solution {
     public String maxSumOfSquares(int num, int sum) {
-
-        if (sum > 9 * num) {
-            return "";
-        }
-
         StringBuilder cal = new StringBuilder();
 
         while (num > 0) {
@@ -18,6 +13,8 @@ class Solution {
 
             num--;
         }
+
+        if(sum > 0) return "";
 
         return cal.toString();
     }
