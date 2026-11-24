@@ -8,6 +8,10 @@ class Solution {
          return GCD(b, a % b);
     }
 
+    private int LCM(int a, int b){
+        return (a * b) / GCD(a, b);
+    }
+
     public int maxLength(int[] nums) {
         int n = nums.length;
         int maxLength = 0;
@@ -22,7 +26,7 @@ class Solution {
 
                 gcd = GCD(gcd, nums[j]);
 
-                lcm = (lcm / GCD((int)lcm, nums[j])) * nums[j];
+                lcm = LCM(lcm, nums[j]);
 
                 if((lcm * gcd) == product){
                    maxLength = Math.max(maxLength, j - i + 1);
